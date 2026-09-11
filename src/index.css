@@ -1,1 +1,98 @@
 @import "tailwindcss";
+
+@font-face {
+    src:url('/assets/fonts/tf2c-build.woff2') format("woff2");
+    font-family:"TF2C Build";
+}
+@font-face {
+    font-family: "OLEgiziano-Medium";
+    src: url('/assets/fonts/OLEgiziano-Bold.woff2') format("woff2"); /* Укажи правильный путь к файлу */
+}
+/* ======================== */
+/* TEAM FORTRESS BUTTONS    */
+/* ======================== */
+
+body {
+    font-family: 'TF2C Build', serif;
+    background-image: url('/assets/bg_center.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overscroll-behavior: none;
+    background-color: rgb(36, 35, 34);
+}
+.TFButton {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    width: 100%;
+    min-height: 120px;
+    padding: 12px 10px;
+
+    border: 1.5px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+
+    background: linear-gradient(180deg, #E5D9C1, #B8AE92, #9C8E71) padding-box,
+    linear-gradient(180deg, #FFFDF0, #FFF7DA 10%, #B6A279 90%, #91794C 100%) border-box;
+
+    color: #2A2725;
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.15s ease, filter 0.15s ease, opacity 0.15s ease;
+}
+
+.TFButton:hover {
+    background:linear-gradient(180deg, #9D4F3F, #70392D, #512A20) padding-box, linear-gradient(180deg, #DA9C77, #AD5444 10%, #572D22 90%, #2C1813 100%) border-box;
+    color:#ECE3CB;
+}
+@media (hover: hover) and (pointer: fine) {
+    .TFButton:hover:not(:disabled) {
+        transform: translateY(-4px);
+    }
+}
+
+.TFButton:active:not(:disabled) {
+    transform: scale(0.93);
+}
+.TFButton:active {
+    background:linear-gradient(180deg, #80735B, #9D8C6D, #BAA57F) padding-box, linear-gradient(180deg, #5C5341, #695F4B 10%, #9E8C6C 90%, #D9CEB6 100%) border-box;
+}
+.TFButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    pointer-events: none;
+    transform: none;
+    transition: none;
+}
+
+.tf2-gradient-text {
+
+    font-family: 'OLEgiziano-Medium', 'Impact', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block; /* Чтобы градиент и тени корректно отображались внутри строки */
+
+
+    background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f2f2f2 45%,
+            #d8d8d8 50%,
+            #a8a8a8 100%
+    );
+
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+
+    filter: drop-shadow(0px 2px 0px #2b231d)
+    drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
