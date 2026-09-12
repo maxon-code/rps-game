@@ -1,24 +1,23 @@
-
-
+<p align="center">
+  <img src="public/github.png" alt="RPS-Game Logo" width="120" />
+</p>
 
 ### 📝 Overview
 
-Retrac Shop is a web application that displays the current item shop from the [Fortnite Retrac launcher.](https://discord.com/invite/ajabc7uEUg)
+**RPS-Game** (Rock, Paper, Scissors) is an interactive web application where you can play the classic game against a bot.
 
+---
 
 ### ⚡ Quick Installation
 
-For a quick preview of React Shop, get started in seconds:
-
 #### Prerequisites
 
-- Node.js (version 18-22) and npm
+- **Node.js** (version 18–22) and **npm**
 
 #### Steps
 
 ```bash
-git clone https://github.com/maxon-code/retrac-shop
+git clone [https://github.com/maxon-code/rps-game.git](https://github.com/maxon-code/rps-game.git)
 cd rps-game
 npm install
 npm run dev
-```

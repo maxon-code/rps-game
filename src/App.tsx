@@ -50,13 +50,6 @@ function App() {
             setResult(res);
             setRolling(false);
 
-            if (res === "win") {
-                audio.play("win");
-            }
-
-            if (res === "lose") {
-                audio.play("lose");
-            }
 
             if (res === "draw") {
                 audio.play("rps");
