@@ -17,7 +17,7 @@
 #### Steps
 
 ```bash
-git clone [https://github.com/maxon-code/rps-game.git](https://github.com/maxon-code/rps-game.git)
+git clone https://github.com/maxon-code/rps-game.git
 cd rps-game
 npm install
 npm run dev
