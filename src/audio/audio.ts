@@ -1,8 +1,6 @@
-export type SfxName = 'win' | 'lose' | 'rps';
+export type SfxName = 'rps';
 const SFX: Record<SfxName, { url: string; volume: number }> = {
-    win: { url: '/sfx/win.mp3', volume: 0.75 },
-    lose: { url: '/sfx/lose.mp3', volume: 0.75 },
-    rps: { url: '/sfx/rps.mp3', volume: 0.65 },
+    rps: { url: '/sfx/rps.mp3', volume: 0.65 }
 };
 
 const ROLL_URL = '/sfx/roling.mp3';
@@ -28,8 +26,11 @@ class AudioEngine {
         this.roll.preload = 'auto';
     }
     /** Разовый звук: win / lose / rps */
+    /** Разовый звук: win / lose / rps */
     play(name: SfxName) {
         if (!this.sfxOn) return;
+        // Убираем звук для победы и поражения
+
         const a = this.oneShots.get(name);
         if (!a) return;
         try {
